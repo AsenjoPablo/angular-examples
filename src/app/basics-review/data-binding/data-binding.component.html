@@ -31,22 +31,25 @@
       <p>
         This input field takes an input then shows it under the button on submit
       </p>
-      <input
-        class="form-control w-25"
-        type="text"
-        placeholder="text"
-        (input)="onUpdateText($event)"
-      />
-      <button
-        class="btn btn-primary btn-sha-blue my-3"
-        (click)="onSubmitText()"
-      >
-        submit
-      </button>
-      <p class="shadowblock">
-        Your text:
-        <span class="inputText">{{ shownText }}</span>
-      </p>
+      <div class="col-lg-6">
+        <input
+          class="form-control w-50"
+          type="text"
+          placeholder="text"
+          (input)="onUpdateText($event)"
+          maxlength="15"
+        />
+        <button
+          class="btn btn-primary btn-sha-blue my-3"
+          (click)="onSubmitText()"
+        >
+          submit
+        </button>
+        <p class="shadowblock">
+          Your text:
+          <span class="inputText">{{ shownText }}</span>
+        </p>
+      </div>
     </div>
   </div>
   <hr />
@@ -57,16 +60,19 @@
       <p>
         This input will retrieve some text info, then store it in a variable
       </p>
-      <input
-        class="mb-3 form-control w-25"
-        type="text"
-        placeholder="Type in to update"
-        [(ngModel)]="twoWayText"
-      />
-      <p class="shadowblock">
-        Text updated in real time:
-        <span class="inputText">{{ twoWayText }}</span>
-      </p>
+      <div class="col-lg-6">
+        <input
+          class="mb-3 form-control w-75"
+          type="text"
+          placeholder="Type in to update"
+          [(ngModel)]="twoWayText"
+          maxlength="15"
+        />
+        <p class="shadowblock">
+          Text updated in real time:
+          <span class="inputText">{{ twoWayText }}</span>
+        </p>
+      </div>
     </div>
   </div>
 </div>
