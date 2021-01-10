@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="row border p-5">
+        <div class="col-12">
+          <h2>This is the parent component</h2>
+          <h6 class="border p-3 w-50">
+            Word: <span>{{ parentWord }}</span>
+          </h6>
+          <div *ngIf="parentWord === ''">
+            <strong>
+              *Submit a word in the child component to move it to this parent
+              component
+            </strong>
+          </div>
+        </div>
+        <hr />
+        <div class="col-12">
+          <h4>Parent has the following object:</h4>
+          <div class="row">
+            <div class="col-12 card my-3">
+              <img
+                src="{{ parentObject.img }}"
+                alt="animal pic"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ parentObject.name }}</h5>
+                <hr class="px-0 mx-0" />
+                <div class="card-text">
+                  <strong>Year:</strong> {{ parentObject.year }} <br />
+                  <strong>Color:</strong> {{ parentObject.color }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <app-child-component
+        (wordWasChosen)="getWord($event)"
+        [dataFromParent]="parentObject"
+      ></app-child-component>
+    </div>
+  </div>
+</div>

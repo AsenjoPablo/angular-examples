@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Services section</h2>
+      <p>Click the button to retrieve data from a fake database</p>
+      <button class="btn btn-success" (click)="getPeople()">press me!</button>
+    </div>
+    <div class="col-12" *ngIf="people.length === 0">Nothing loaded yet</div>
+    <div class="col-4" *ngFor="let person of people">
+      <div class="card">
+        <img src="{{ person.img }}" alt="a person" class="card-img-top" />
+        <div class="card-body">
+          <div class="card-title">
+            <strong> {{ person.name }} </strong>
+          </div>
+          <div class="card-text">Age: {{ person.age }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
