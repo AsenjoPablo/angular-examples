@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'repaso-inicial';
+  public isMenuCollapsed = true;
 }

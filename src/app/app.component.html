@@ -4,17 +4,18 @@
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/">Angular review: Pablo Asenjo</a>
     <button
-      class="navbar-toggler m-0"
+      style="margin-bottom: 0"
+      class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+      (click)="isMenuCollapsed = !isMenuCollapsed"
     >
-      <span class="navbar-toggler-icon"></span>
+      &#9776;
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div
+      [ngbCollapse]="isMenuCollapsed"
+      class="collapse navbar-collapse"
+      id="navbarNavAltMarkup"
+    >
       <div class="navbar-nav">
         <a class="nav-link" routerLink="/">Home</a>
         <a class="nav-link" routerLink="/basics-review">Basics section</a>

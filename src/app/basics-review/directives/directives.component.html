@@ -18,7 +18,7 @@
         <p class="shadowblock not-shown">No content is being shown ❌</p>
       </ng-template>
 
-      <button class="btn btn-primary" (click)="toggleContent()">
+      <button class="btn btn-primary btn-sha-blue" (click)="toggleContent()">
         Toggle content
       </button>
     </div>
@@ -35,7 +35,9 @@
       <p class="shadowblock" [ngStyle]="{ color: getColor() }">
         This text will change color on button click
       </p>
-      <button class="btn btn-primary" (click)="newColor()">Random color</button>
+      <button class="btn btn-primary btn-sha-blue" (click)="newColor()">
+        Random color
+      </button>
     </div>
     <hr />
   </div>
@@ -51,7 +53,9 @@
         class="square"
         [ngClass]="{ small: size === 'small', big: size === 'big' }"
       ></div>
-      <button class="btn btn-primary" (click)="toggleSize()">resize</button>
+      <button class="btn btn-primary btn-sha-blue" (click)="toggleSize()">
+        resize
+      </button>
     </div>
     <hr />
   </div>

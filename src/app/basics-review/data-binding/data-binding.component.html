@@ -15,7 +15,7 @@
       <h2>2. Property binding & Event binding</h2>
       <p>This button will be disabled for 2 seconds on click</p>
       <button
-        class="btn btn-primary"
+        class="btn btn-primary btn-sha-blue"
         (click)="disableButtons()"
         [disabled]="buttonDisabled_2"
       >
@@ -37,7 +37,10 @@
         placeholder="text"
         (input)="onUpdateText($event)"
       />
-      <button class="btn btn-primary my-3" (click)="onSubmitText()">
+      <button
+        class="btn btn-primary btn-sha-blue my-3"
+        (click)="onSubmitText()"
+      >
         submit
       </button>
       <p class="shadowblock">
