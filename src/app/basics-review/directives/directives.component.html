@@ -49,10 +49,13 @@
         Square will alternate between 'small class' square and 'big class'
         square.
       </p>
-      <div
-        class="square"
-        [ngClass]="{ small: size === 'small', big: size === 'big' }"
-      ></div>
+      <div class="sqhold">
+        <div
+          class="square"
+          [ngClass]="{ small: size === 'small', big: size === 'big' }"
+        ></div>
+      </div>
+
       <button class="btn btn-primary btn-sha-blue" (click)="toggleSize()">
         resize
       </button>

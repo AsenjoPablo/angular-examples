@@ -8,9 +8,12 @@ import { HomeComponent } from './home/home.component';
 
 const appRoutes = [
   { path: '', component: HomeComponent },
-  { path: 'basics-review', component: BasicsReviewComponent },
-  { path: 'data-binding', component: DataBindingComponent },
-  { path: 'directives', component: DirectivesComponent },
+  {
+    path: 'basics-review',
+    component: BasicsReviewComponent,
+  },
+  { path: 'basics-review/data-binding', component: DataBindingComponent },
+  { path: 'basics-review/directives', component: DirectivesComponent },
 ];
 
 @NgModule({
