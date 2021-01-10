@@ -1,0 +1,10 @@
+a {
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #0275d8;
+  transition: all 0.3s;
+}

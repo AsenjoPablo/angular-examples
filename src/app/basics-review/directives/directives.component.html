@@ -1,0 +1,77 @@
+<div class="main-container container animate__animated animate__fadeIn">
+  <div class="row">
+    <div class="col-12">
+      <h2>Directives section</h2>
+
+      <p>
+        Content will toggle between shown and not shown, with a fallback
+        template in case it is not being shown.
+      </p>
+
+      <p
+        class="shadowblock shown animate__animated animate__fadeIn"
+        *ngIf="contentShown; else noContent"
+      >
+        Content is being shown ✅
+      </p>
+      <ng-template #noContent>
+        <p class="shadowblock not-shown">No content is being shown ❌</p>
+      </ng-template>
+
+      <button class="btn btn-primary" (click)="toggleContent()">
+        Toggle content
+      </button>
+    </div>
+    <hr />
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h2>ngStyle</h2>
+      <p>
+        Color property will change to a random color (r,g,b) each time the
+        button is clicked.
+      </p>
+      <p class="shadowblock" [ngStyle]="{ color: getColor() }">
+        This text will change color on button click
+      </p>
+      <button class="btn btn-primary" (click)="newColor()">Random color</button>
+    </div>
+    <hr />
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h2>ngClass</h2>
+      <p>
+        Square will alternate between 'small class' square and 'big class'
+        square.
+      </p>
+      <button class="btn btn-primary" (click)="toggleSize()">resize</button>
+      <div
+        class="square"
+        [ngClass]="{ small: size === 'small', big: size === 'big' }"
+      ></div>
+    </div>
+    <hr />
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>ngFor</h2>
+        Generación de tarjetas desde un array procedente de TypeScript.
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 card my-3" *ngFor="let animal of animals">
+        <img src="{{ animal.img }}" alt="animal pic" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ animal.name }}</h5>
+          <hr class="px-0 mx-0" />
+          <div class="card-text">Species: {{ animal.species }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

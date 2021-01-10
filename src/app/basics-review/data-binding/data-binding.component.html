@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Data binding</h1>
+      <div>
+        <h2>1. String interpolation</h2>
+        <p>We can use - {{ stringInterpolation }} -</p>
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-12">
+      <h2>2. Property binding & Event binding</h2>
+      <p>This button will be disabled for 2 seconds on click</p>
+      <button
+        class="btn btn-primary"
+        (click)="disableButtons()"
+        [disabled]="buttonDisabled_2"
+      >
+        Disable
+      </button>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-12">
+      <h2>3. Event binding with $event</h2>
+      <p>
+        This input field takes an input then shows it under the button on submit
+      </p>
+      <input
+        class="form-control w-25"
+        type="text"
+        placeholder="text"
+        (input)="onUpdateText($event)"
+      />
+      <button class="btn btn-primary my-3" (click)="onSubmitText()">
+        submit
+      </button>
+      <p class="shadowblock">
+        Your text:
+        <span class="inputText">{{ shownText }}</span>
+      </p>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-12">
+      <h2>4. Two way data binding</h2>
+      <p>
+        This input will retrieve some text info, then store it in a variable
+      </p>
+      <input
+        class="mb-3 form-control w-25"
+        type="text"
+        placeholder="Type in to update"
+        [(ngModel)]="twoWayText"
+      />
+      <p class="shadowblock">
+        Text updated in real time:
+        <span class="inputText">{{ twoWayText }}</span>
+      </p>
+    </div>
+  </div>
+  <hr />
+</div>
