@@ -40,3 +40,12 @@ li {
   width: fit-content;
   border-left: solid 2px #0275d8;
 }
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: grey;
+  height: 1px;
+}
